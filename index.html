@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <style>
+     
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: rgb(232,236,238);
+      }
+      .container {
+        max-width: 500px;
+        width: 90%;
+        margin: 0 auto;
+        background-color:rgb(182, 207, 220) ;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: 2px 2px 5px rgb(182, 207, 220), -2px -2px 5px rgb(182, 207, 220);
+        border: 1.5px solid rgb(232,236,238);
+      }
+      h2{
+        font-size: 30px;
+      }
+      .add, input{
+        border: none;
+        outline: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        margin: 20px 0;
+        font-weight: 600;
+      }
+      input{
+        width: 70%;
+      }
+      .add{
+        cursor: pointer;
+        background-color: rgb(27, 166, 187);
+        color: white;
+        margin-left: 10px;
+        padding: 12px 20px;
+      }
+      .add:hover{
+        background-color:rgb(6, 114, 131) ;
+      }
+      .add:active{
+        transform: scale(0.96);
+      }
+      .ul{
+        width: 100%;
+        max-width: 450px;
+        text-align: left;
+        border: none;
+      }
+      .ul li{
+        list-style-type: none;
+        margin: 10px 0;
+        font-size: 1.3rem;
+        border: 0.5px solid grey;
+        border-radius: 10px;
+        background-color: white;
+        padding: 8px 12px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        align-items: center;
+        transition: all 0.2s ease;
+      }
+      .ul li:hover{
+        background-color: rgb(230, 225, 225);
+      }
+      li div{
+        display: flex;
+        
+      }
+      .btn{
+        border: none;
+        font-size: 1rem;
+        background: none;
+        cursor: pointer;
+        font-weight: 500;
+        padding: 5px;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+      }
+      .pad{
+        padding: 0;
+      }
+
+      .pad input{
+       font-size: 18px;
+       padding: 0 !important;
+        margin: 0 !important;
+        border: none;
+      }
+      
+      .deleteBtn{
+        color: red;
+      }
+      .editBtn{
+        color: green;
+        
+      }
+      .editBtn:hover {
+            background-color: #dcfce7;
+            
+            transform: scale(1.05);
+        }
+
+        .editBtn:active {
+            transform: scale(0.95);
+        }
+
+        .deleteBtn:hover {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            transform: scale(1.05);
+        }
+
+        .deleteBtn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width:375px){
+            input{ 
+                width: 65%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-container">
+
+        <h2>To Do List</h2>
+
+        <input type="text" placeholder="Add a new Task.." id="inputBox">
+
+        <button class="add" id="addBtn">Add</button>
+
+        <ul class="ul" id="todoList">
+
+            <!-- <li>Task-1</li>
+            <li>Task-2</li>
+            <li>Task-3</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
